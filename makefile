@@ -26,16 +26,16 @@ install-dev: prepare-dev install-mongo
 	echo "Execute make run-dev to development environment"
 
 pep8:
-	pep8 src
+	pep8 in-time
 
 run-dev: prepare-dev pep8
-	cd src &&\
+	cd in-time &&\
 	export FLASK_DEBUG=1 &&\
 	export FLASK_APP=server.py &&\
 	flask run
 
 run: prepare
-	cd src &&\
+	cd in-time &&\
 	export FLASK_DEBUG=0 &&\
 	export FLASK_APP=server.py &&\
 	flask run
