@@ -1,7 +1,7 @@
 from db.load_db import db
 from utils import password_md5
 
-StringField = db.StringFieldmak
+StringField = db.StringField
 
 
 class PasswordField(StringField):
