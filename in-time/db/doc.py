@@ -10,11 +10,11 @@ class Doc(Document):
         for k in _dict:
             if isinstance(_dict[k].value, ObjectId):
                 json[k] = str(_dict[k].value)
-            elif isinstance(_dict[k].value, MyDoc):
+            elif isinstance(_dict[k].value, Doc):
                 json[k] = _dict[k].value.to_json()
             elif type(_dict[k].value) is list:
                 json[k] = [
-                    item if not isinstance(_dict[k].value, MyDoc)
+                    item if not isinstance(_dict[k].value, Doc)
                     else item.to_json() for item in _dict[k].value
                 ]
             else:
