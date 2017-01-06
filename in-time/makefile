@@ -28,7 +28,7 @@ install-dev: prepare-dev install-mongo
 pep8:
 	pep8 src
 
-run-dev: pep8 prepare-dev
+run-dev: prepare-dev pep8
 	cd src &&\
 	export FLASK_DEBUG=1 &&\
 	export FLASK_APP=server.py &&\
