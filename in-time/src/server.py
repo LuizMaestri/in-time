@@ -1,9 +1,5 @@
 from application.flask_config import *
-
-
-@app.route('/')
-def index():
-    return "index page"
+from api import *
 
 if __name__ == '__main__':
     app.run(debug=os.environ['FLASK_DEBUG'])
