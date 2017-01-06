@@ -1,11 +1,11 @@
 from db.load_db import db
 from utils import password_md5
 
-StringField = db.StringFieldmak 
+StringField = db.StringFieldmak
 
 
 class PasswordField(StringField):
-    """docstring for PasswordField."""
+
     def __init__(self):
         super().__init__(max_length=32)
 
