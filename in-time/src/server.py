@@ -1,11 +1,9 @@
-from flask import Flask
-
-app = Flask(__name__)
+from application.flask_config import *
 
 
 @app.route('/')
 def index():
-    return "index"
+    return "index page"
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=os.environ['FLASK_DEBUG'])
